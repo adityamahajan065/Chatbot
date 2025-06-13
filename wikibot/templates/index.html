@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SmartBot</title>
-    <link rel="stylesheet" href="static/style.css">
+  <meta charset="UTF-8">
+  <title>SmartBot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="chat-container">
-        <h1>💬 SmartBot</h1>
-
-        <div id="chat-box" class="chat-box"></div>
-
-        <div class="controls">
-            <input type="text" id="user-input" placeholder="Ask me anything...">
-            <button id="send-btn">Send</button>
-            <button id="clear-btn" class="mini-clear-btn" title="Clear chat">🧹</button>
-        </div>
+  <div class="chat-container">
+    <h1>💬SmartBot</h1>
+    <div id="chat-box" class="chat-box"></div>
+    <div class="controls">
+      <input type="text" id="user-input" placeholder="Ask me anything...">
+      <button onclick="sendMessage()">Send</button>
+      <button onclick="clearChat()">🗑️</button>
     </div>
+  </div>
 
-    <script src="static/script.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
